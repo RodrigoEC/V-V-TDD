@@ -37,5 +37,16 @@ public class FaturaTest {
         assertEquals(fatura.getPrice(), this.price, 0);
     }
 
+    @Test
+    public void testFaturaIsNotPaid() {
+        Fatura fatura = new Fatura(this.client, this.date, this.price);
+            assertEquals(fatura.getIsPaid(), "NÃO PAGA");
+    }
 
+    @Test
+    public void testFaturaIsPaid() {
+        Fatura fatura = new Fatura(this.client, this.date, this.price);
+        fatura.pay();
+        assertEquals(fatura.getIsPaid(), "PAGA");
+    }
 }

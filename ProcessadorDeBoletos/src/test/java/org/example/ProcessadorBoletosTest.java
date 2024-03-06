@@ -3,10 +3,8 @@ package org.example;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,7 +25,15 @@ public class ProcessadorBoletosTest {
 
     @Test
     public void testCreateProcessadorBoletos() {
-        ProcessadorBoletos processador = new ProcessadorBoletos(this.boletos, this.fatura);
+        ProcessadorBoletos processador = new ProcessadorBoletos();
         assertEquals(processador.getClass(), ProcessadorBoletos.class);
     }
+
+    @Test
+    public void testProcessingBoletos() {
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, fatura);
+        assertEquals(pagamentos.size(), 3);
+    }
+
 }
