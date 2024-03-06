@@ -48,7 +48,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BoletoTest">
+  <component name="RunManager" selected="JUnit.FaturaTest.testCreateFatura">
     <configuration name="BoletoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessadorDeBoletos" />
       <extension name="coverage">
@@ -112,8 +112,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FaturaTest.testCreateFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProcessadorDeBoletos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FaturaTest" />
+      <option name="METHOD_NAME" value="testCreateFatura" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FaturaTest.testCreateFatura" />
         <item itemvalue="JUnit.BoletoTest" />
         <item itemvalue="JUnit.BoletoTest.testBoletoHasWrongCodigo" />
         <item itemvalue="JUnit.BoletoTest.testBoletoHasValue" />
