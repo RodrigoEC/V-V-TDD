@@ -4,7 +4,26 @@ import java.util.Date;
 
 public class Boleto {
 
-    public Boleto(String codigo, Date data, float valor) {
+    private final String id;
+    private final Date data;
+    private final double valor;
+    public Boleto(String id, Date data, double valor) {
+        this.id = id;
+        this.data = data;
+        this.valor = valor;
     }
+
+    public String getiD() {
+        return id;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
 
 }
