@@ -28,9 +28,21 @@ public class PagamentoTest {
     }
 
     @Test
+    public void testGetPagamentoWrongValuePaid() {
+        Pagamento pagamento = new Pagamento(this.valuePaid, this.date, this.type);
+        assertEquals(pagamento.getValuePaid(), 20, 100.60);
+    }
+
+    @Test
     public void testGetPagamentoDate() {
         Pagamento pagamento = new Pagamento(this.valuePaid, this.date, this.type);
         assertEquals(pagamento.getDate(), this.date);
+    }
+
+    @Test
+    public void testGetPagamentoWrongDate() {
+        Pagamento pagamento = new Pagamento(this.valuePaid, this.date, this.type);
+        assertNotEquals(pagamento.getDate(), new Date()); // This date includes hour, minute and second just like a payment would
     }
 
     @Test
@@ -38,5 +50,11 @@ public class PagamentoTest {
         Pagamento pagamento = new Pagamento(this.valuePaid, this.date, this.type);
         assertEquals(pagamento.getType(), this.type);
     }
-    
+
+    @Test
+    public void testGetPagamentoWrongType() {
+        Pagamento pagamento = new Pagamento(this.valuePaid, this.date, this.type);
+        assertNotEquals(pagamento.getType(), "CARTẪO");
+    }
+
 }

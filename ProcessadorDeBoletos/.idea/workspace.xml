@@ -53,54 +53,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PagamentoTest">
-    <configuration name="FaturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProcessadorDeBoletos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.FaturaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FaturaTest.testCreateFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProcessadorDeBoletos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.FaturaTest" />
-      <option name="METHOD_NAME" value="testCreateFatura" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FaturaTest.testGetFaturasClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProcessadorDeBoletos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.FaturaTest" />
-      <option name="METHOD_NAME" value="testGetFaturasClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PagamentoTest.testGetPagamentoWrongValuePaid">
     <configuration name="PagamentoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessadorDeBoletos" />
       <extension name="coverage">
@@ -132,13 +85,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PagamentoTest.testGetPagamentoWrongDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProcessadorDeBoletos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PagamentoTest" />
+      <option name="METHOD_NAME" value="testGetPagamentoWrongDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PagamentoTest.testGetPagamentoWrongType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProcessadorDeBoletos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PagamentoTest" />
+      <option name="METHOD_NAME" value="testGetPagamentoWrongType" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PagamentoTest.testGetPagamentoWrongValuePaid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProcessadorDeBoletos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PagamentoTest" />
+      <option name="METHOD_NAME" value="testGetPagamentoWrongValuePaid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PagamentoTest.testGetPagamentoWrongValuePaid" />
+        <item itemvalue="JUnit.PagamentoTest.testGetPagamentoWrongDate" />
+        <item itemvalue="JUnit.PagamentoTest.testGetPagamentoWrongType" />
         <item itemvalue="JUnit.PagamentoTest" />
         <item itemvalue="JUnit.PagamentoTest.testCreatePagamento" />
-        <item itemvalue="JUnit.FaturaTest" />
-        <item itemvalue="JUnit.FaturaTest.testCreateFatura" />
-        <item itemvalue="JUnit.FaturaTest.testGetFaturasClient" />
       </list>
     </recent_temporary>
   </component>
