@@ -36,4 +36,11 @@ public class ProcessadorBoletosTest {
         assertEquals(pagamentos.size(), 3);
     }
 
+    @Test
+    public void testProcessingBoletosPayedFatura() {
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, fatura);
+        assertEquals(this.fatura.getIsPaid(), "PAGA");
+    }
+
 }
