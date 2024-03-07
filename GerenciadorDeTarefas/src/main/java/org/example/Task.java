@@ -7,12 +7,18 @@ import java.util.Collection;
 import java.util.List;
 
 public class Task {
+    private static int nextId = 1; 
 
+    private int id;
 
     private String title;
     private String description;
     private LocalDate dueDate;
     private TaskPriority priority;
+
+    public Task() {
+
+    }
 
     public enum TaskPriority {
         HIGH, MEDIUM, LOW
@@ -29,6 +35,14 @@ public class Task {
         return title;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -40,21 +54,35 @@ public class Task {
     public TaskPriority getPriority() {
         return priority;
     }
+    private List<Task> tasks = new ArrayList<>();
 
-    public Task() {
-
+    public void addTask(Task task) {
+        tasks.add(task);
     }
-    
-        private List<Task> tasks = new ArrayList<>();
 
-        public void addTask(Task task) {
-            tasks.add(task);
+    public List<Task> getTasks() {
+        return new ArrayList<>(tasks);
+    }
+
+    public Task getTaskById(int id) {
+        for (Task task : tasks) {
+            if (task.getId() == id) {
+                return task;
+            }
         }
+        return null;
+    }
 
-        public List<Task> getTasks() {
-            return new ArrayList<>(tasks);
+    public void updateTask(Task updatedTask) {
+        Task taskToBeUpdated = getTaskById(updatedTask.getId());
+        if (taskToBeUpdated != null) {
+            tasks.remove(taskToBeUpdated);
+            tasks.add(updatedTask);
         }
     }
+}
+
+
 
 
 
