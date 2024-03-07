@@ -25,4 +25,8 @@ public class Pagamento {
     public Date getDate() {
         return date;
     }
+
+    public String toString() {
+        return String.format("%s - %s - %s", this.date.toString(), this.type, this.valuePaid);
+    }
 }
