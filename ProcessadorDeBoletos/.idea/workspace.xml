@@ -52,6 +52,7 @@
     "JUnit.ProcessadorBoletosTest.testGetProcessadorBoletosFatura.executor": "Run",
     "JUnit.ProcessadorBoletosTest.testProcessingBoletos.executor": "Run",
     "JUnit.ProcessadorBoletosTest.testProcessingBoletosPayedFatura.executor": "Run",
+    "JUnit.java in ProcessadorDeBoletos.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -65,7 +66,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BoletoTest.testBoletoValueZero">
+  <component name="RunManager" selected="JUnit.java in ProcessadorDeBoletos">
     <configuration name="BoletoTest.testBoletoValueNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessadorDeBoletos" />
       <extension name="coverage">
@@ -114,21 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcessadorBoletosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProcessadorDeBoletos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ProcessadorBoletosTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProcessadorBoletosTest.testProcessingBoletosPayedFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessadorDeBoletos" />
       <extension name="coverage">
@@ -145,13 +131,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in ProcessadorDeBoletos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProcessadorDeBoletos" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in ProcessadorDeBoletos" />
         <item itemvalue="JUnit.BoletoTest.testBoletoValueZero" />
         <item itemvalue="JUnit.BoletoTest.testBoletoValueNegative" />
         <item itemvalue="JUnit.ProcessadorBoletosTest.testProcessingBoletosPayedFatura" />
         <item itemvalue="JUnit.FaturaTest.testFaturaIsPaid" />
-        <item itemvalue="JUnit.ProcessadorBoletosTest" />
       </list>
     </recent_temporary>
   </component>

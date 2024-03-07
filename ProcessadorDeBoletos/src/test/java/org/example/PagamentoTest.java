@@ -42,7 +42,8 @@ public class PagamentoTest {
     @Test
     public void testGetPagamentoWrongDate() {
         Pagamento pagamento = new Pagamento(this.valuePaid, this.date, this.type);
-        assertNotEquals(pagamento.getDate(), new Date()); // This date includes hour, minute and second just like a payment would
+        Date myDate = new Date(System.currentTimeMillis());
+        assertNotEquals(pagamento.getDate(), new Date(myDate.getTime() - (10 * 24 * 60 * 60 * 1000))); // removes 10 days from current date
     }
 
     @Test
