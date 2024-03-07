@@ -2,10 +2,8 @@ package org.example;
 
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Task {
     private static int nextId = 1; 
@@ -91,6 +89,12 @@ public class Task {
                 break;
             }
         }
+    }
+
+    public List<Task> getTasksByPriority(TaskPriority priority) {
+        return tasks.stream()
+                .filter(task -> task.getPriority() == priority)
+                .collect(Collectors.toList());
     }
 
 
