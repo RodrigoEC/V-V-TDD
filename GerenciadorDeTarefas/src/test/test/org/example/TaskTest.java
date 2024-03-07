@@ -40,4 +40,21 @@ class TaskTest {
         assertEquals(LocalDate.now().plusDays(2), result.getDueDate());
         assertEquals(Task.TaskPriority.HIGH, result.getPriority());
     }
+
+    @Test
+    void testDeleteTask() {
+        // Adiciona uma tarefa
+        Task task = new Task("Ler livro", "Ler um livro sobre TDD", LocalDate.now().plusDays(3), Task.TaskPriority.LOW);
+        taskManager.addTask(task);
+        int taskId = task.getId();
+
+        // Verifica se a tarefa foi adicionada
+        assertNotNull(taskManager.getTaskById(taskId));
+
+        // Exclui a tarefa
+        taskManager.deleteTask(taskId);
+
+        // Verifica se a tarefa foi excluída
+        assertNull(taskManager.getTaskById(taskId), "A tarefa deve ser null após ser excluída.");
+    }
 }

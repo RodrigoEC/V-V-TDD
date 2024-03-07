@@ -4,6 +4,7 @@ package org.example;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 public class Task {
@@ -80,6 +81,19 @@ public class Task {
             tasks.add(updatedTask);
         }
     }
+
+    public void deleteTask(int id) {
+        Iterator<Task> iterator = tasks.iterator();
+        while (iterator.hasNext()) {
+            Task task = iterator.next();
+            if (task.getId() == id) {
+                iterator.remove();
+                break;
+            }
+        }
+    }
+
+
 }
 
 
