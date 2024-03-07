@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class FaturaTest {
 
@@ -38,6 +39,20 @@ public class FaturaTest {
     }
 
     @Test
+    public void testGetFaturasNegativePrice() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Fatura fatura = new Fatura(this.client, this.date, -1200);
+        });
+    }
+
+    @Test
+    public void testGetFaturasZeroPrice() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Fatura fatura = new Fatura(this.client, this.date, 0);
+        });
+    }
+
+    @Test
     public void testFaturaIsNotPaid() {
         Fatura fatura = new Fatura(this.client, this.date, this.price);
             assertEquals(fatura.getIsPaid(), "NÃO PAGA");
@@ -49,4 +64,5 @@ public class FaturaTest {
         fatura.pay();
         assertEquals(fatura.getIsPaid(), "PAGA");
     }
+
 }

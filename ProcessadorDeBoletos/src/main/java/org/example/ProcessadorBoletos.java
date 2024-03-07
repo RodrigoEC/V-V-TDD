@@ -15,7 +15,7 @@ public class ProcessadorBoletos {
             totalCost += boleto.getValor();
         }
 
-        if (totalCost <= fatura.getPrice()) {
+        if (totalCost >= fatura.getPrice()) {
             fatura.pay();
 
             ArrayList<Pagamento> pagamentos = new ArrayList<>();

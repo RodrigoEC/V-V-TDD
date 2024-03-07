@@ -37,6 +37,24 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    public void testProcessingBoletosMoreThenSuffiecientMoney() {
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 100);
+
+        ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, anotherFatura);
+        assertEquals(pagamentos.size(), 3);
+    }
+
+    @Test
+    public void testProcessingBoletosNotSuffiecientMoney() {
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 1000);
+
+        ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, anotherFatura);
+        assertEquals(pagamentos.size(), 0);
+    }
+
+    @Test
     public void testProcessingBoletosPayedFatura() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, fatura);

@@ -10,6 +10,10 @@ public class Fatura {
     private String isPaid;
 
     public Fatura(String client, Date date, double price) {
+        if (price <= 0) {
+            throw new IllegalArgumentException("Value not permitted" + price);
+        }
+
         this.client = client;
         this.date = date;
         this.price = price;
