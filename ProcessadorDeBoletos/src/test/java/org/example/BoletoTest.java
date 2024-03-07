@@ -2,10 +2,10 @@ package org.example;
 
 import org.junit.Test;
 
+import java.lang.reflect.Executable;
 import java.util.Date;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
 
 public class BoletoTest {
@@ -43,5 +43,21 @@ public class BoletoTest {
         double value = 50.50;
         Boleto boleto = new Boleto("123124125412", new Date(), value);
         assertEquals(boleto.getValor(), value, 0);
+    }
+
+    @Test
+    public void testBoletoValueNegative() {
+        double value = -50.50;
+        assertThrows(IllegalArgumentException.class, () -> {
+            Boleto boleto = new Boleto("123124125412", new Date(), value);
+        });
+    }
+
+    @Test
+    public void testBoletoValueZero() {
+        double value = 0;
+        assertThrows(IllegalArgumentException.class, () -> {
+            Boleto boleto = new Boleto("123124125412", new Date(), value);
+        });
     }
 }

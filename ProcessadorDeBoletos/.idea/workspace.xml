@@ -34,6 +34,8 @@
     "JUnit.BoletoTest.executor": "Run",
     "JUnit.BoletoTest.testBoletoHasValue.executor": "Run",
     "JUnit.BoletoTest.testBoletoHasWrongCodigo.executor": "Run",
+    "JUnit.BoletoTest.testBoletoValueNegative.executor": "Run",
+    "JUnit.BoletoTest.testBoletoValueZero.executor": "Run",
     "JUnit.BoletoTest.testCreateBoleto.executor": "Run",
     "JUnit.FaturaTest.executor": "Run",
     "JUnit.FaturaTest.testCreateFatura.executor": "Run",
@@ -63,7 +65,39 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProcessadorBoletosTest.testProcessingBoletosPayedFatura">
+  <component name="RunManager" selected="JUnit.BoletoTest.testBoletoValueZero">
+    <configuration name="BoletoTest.testBoletoValueNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProcessadorDeBoletos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.BoletoTest" />
+      <option name="METHOD_NAME" value="testBoletoValueNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoletoTest.testBoletoValueZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProcessadorDeBoletos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.BoletoTest" />
+      <option name="METHOD_NAME" value="testBoletoValueZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FaturaTest.testFaturaIsPaid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessadorDeBoletos" />
       <extension name="coverage">
@@ -95,38 +129,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcessadorBoletosTest.testGetProcessadorBoletosFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProcessadorDeBoletos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ProcessadorBoletosTest" />
-      <option name="METHOD_NAME" value="testGetProcessadorBoletosFatura" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProcessadorBoletosTest.testProcessingBoletos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProcessadorDeBoletos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ProcessadorBoletosTest" />
-      <option name="METHOD_NAME" value="testProcessingBoletos" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProcessadorBoletosTest.testProcessingBoletosPayedFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessadorDeBoletos" />
       <extension name="coverage">
@@ -145,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BoletoTest.testBoletoValueZero" />
+        <item itemvalue="JUnit.BoletoTest.testBoletoValueNegative" />
         <item itemvalue="JUnit.ProcessadorBoletosTest.testProcessingBoletosPayedFatura" />
         <item itemvalue="JUnit.FaturaTest.testFaturaIsPaid" />
         <item itemvalue="JUnit.ProcessadorBoletosTest" />
-        <item itemvalue="JUnit.ProcessadorBoletosTest.testProcessingBoletos" />
-        <item itemvalue="JUnit.ProcessadorBoletosTest.testGetProcessadorBoletosFatura" />
       </list>
     </recent_temporary>
   </component>
