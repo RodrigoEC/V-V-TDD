@@ -54,9 +54,12 @@
     "JUnit.ProcessadorBoletosTest.testGetProcessadorBoletosBoletos.executor": "Run",
     "JUnit.ProcessadorBoletosTest.testGetProcessadorBoletosFatura.executor": "Run",
     "JUnit.ProcessadorBoletosTest.testProcessingBoletos.executor": "Run",
+    "JUnit.ProcessadorBoletosTest.testProcessingBoletosExectlyWhatWeOwe.executor": "Run",
+    "JUnit.ProcessadorBoletosTest.testProcessingBoletosFaturaZeroMoney.executor": "Run",
     "JUnit.ProcessadorBoletosTest.testProcessingBoletosMoreThenSuffiecientMoney.executor": "Run",
     "JUnit.ProcessadorBoletosTest.testProcessingBoletosNotSuffiecientMoney.executor": "Run",
     "JUnit.ProcessadorBoletosTest.testProcessingBoletosPayedFatura.executor": "Run",
+    "JUnit.ProcessadorBoletosTest.testProcessingBoletosZero.executor": "Run",
     "JUnit.java in ProcessadorDeBoletos.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -71,7 +74,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.ProcessadorBoletosTest.testProcessingBoletosExectlyWhatWeOwe">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="ProcessadorDeBoletos" />
@@ -85,23 +88,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FaturaTest.testGetFaturasZeroPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProcessadorDeBoletos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.FaturaTest" />
-      <option name="METHOD_NAME" value="testGetFaturasZeroPrice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProcessadorBoletosTest.testProcessingBoletosMoreThenSuffiecientMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProcessadorBoletosTest.testProcessingBoletosExectlyWhatWeOwe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessadorDeBoletos" />
       <extension name="coverage">
         <pattern>
@@ -111,7 +98,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.ProcessadorBoletosTest" />
-      <option name="METHOD_NAME" value="testProcessingBoletosMoreThenSuffiecientMoney" />
+      <option name="METHOD_NAME" value="testProcessingBoletosExectlyWhatWeOwe" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProcessadorBoletosTest.testProcessingBoletosFaturaZeroMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProcessadorDeBoletos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ProcessadorBoletosTest" />
+      <option name="METHOD_NAME" value="testProcessingBoletosFaturaZeroMoney" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,21 +136,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in ProcessadorDeBoletos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProcessadorBoletosTest.testProcessingBoletosZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessadorDeBoletos" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ProcessadorBoletosTest" />
+      <option name="METHOD_NAME" value="testProcessingBoletosZero" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.ProcessadorBoletosTest.testProcessingBoletosMoreThenSuffiecientMoney" />
+        <item itemvalue="JUnit.ProcessadorBoletosTest.testProcessingBoletosExectlyWhatWeOwe" />
+        <item itemvalue="JUnit.ProcessadorBoletosTest.testProcessingBoletosZero" />
+        <item itemvalue="JUnit.ProcessadorBoletosTest.testProcessingBoletosFaturaZeroMoney" />
         <item itemvalue="JUnit.ProcessadorBoletosTest.testProcessingBoletosNotSuffiecientMoney" />
-        <item itemvalue="JUnit.java in ProcessadorDeBoletos" />
-        <item itemvalue="JUnit.FaturaTest.testGetFaturasZeroPrice" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>

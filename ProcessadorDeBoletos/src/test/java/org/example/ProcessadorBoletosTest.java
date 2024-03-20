@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class ProcessadorBoletosTest {
 
@@ -37,6 +38,15 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    public void testProcessingBoletosExectlyWhatWeOwe() {
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 310);
+
+        ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, anotherFatura);
+        assertEquals(pagamentos.size(), 3);
+    }
+
+    @Test
     public void testProcessingBoletosMoreThenSuffiecientMoney() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 100);
@@ -52,6 +62,28 @@ public class ProcessadorBoletosTest {
 
         ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, anotherFatura);
         assertEquals(pagamentos.size(), 0);
+        assertEquals(this.fatura.getIsPaid(), "NÃO PAGA");
+    }
+
+    @Test
+    public void testProcessingBoletosZero() {
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 1000);
+        ArrayList<Boleto> novo_boletos = new ArrayList<>();
+        Boleto boleto = new Boleto("123124125412", new Date(), 50);
+        novo_boletos.add(boleto);
+
+        ArrayList<Pagamento> pagamentos = processador.processingBoletos(novo_boletos, anotherFatura);
+
+        assertEquals(pagamentos.size(), 0);
+        assertEquals(this.fatura.getIsPaid(), "NÃO PAGA");
+    }
+
+    @Test
+    public void testProcessingBoletosFaturaZeroMoney() { // this test verifies that we can't create a fatura for a 0 price
+        assertThrows(IllegalArgumentException.class, () -> {
+            Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 0);
+        });
     }
 
     @Test
