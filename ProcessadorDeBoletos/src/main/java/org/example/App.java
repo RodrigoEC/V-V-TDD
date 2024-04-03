@@ -15,7 +15,7 @@ public class App
         Fatura fatura = new Fatura("Rodrigo Eloy Cavalcanti", new Date(), 1000);
 
         ArrayList<Boleto> boletos = new ArrayList<>();
-        boletos.add(new Boleto("8469812e658e4f", new Date(), 100));
+        boletos.add(new Boleto("8469812e658e4f", new Date(), 10));
         boletos.add(new Boleto("8469812e658e40", new Date(), 801));
         boletos.add(new Boleto("8469812e658e42", new Date(), 100));
 
