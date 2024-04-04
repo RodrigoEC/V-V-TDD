@@ -81,4 +81,5 @@ class TaskTest {
         assertEquals(1, lowPriorityTasks.size(), "Deve haver uma tarefa de baixa prioridade.");
         assertEquals(task3, lowPriorityTasks.get(0), "A tarefa de baixa prioridade deve ser 'Task Baixa'.");
     }
+
 }

@@ -20,7 +20,7 @@ public class Task {
     }
 
     public enum TaskPriority {
-        HIGH, MEDIUM, LOW
+        HIGH, MEDIUM, URGENT, LOW
     }
 
     public Task(String title, String description, LocalDate dueDate, TaskPriority priority) {
@@ -57,6 +57,9 @@ public class Task {
     private List<Task> tasks = new ArrayList<>();
 
     public void addTask(Task task) {
+        if (task == null) {
+            throw new NullPointerException("Task cannot be null");
+        }
         tasks.add(task);
     }
 
@@ -75,15 +78,25 @@ public class Task {
 
 
     public void deleteTask(int id) {
+        boolean found = false; // Flag para indicar se a tarefa foi encontrada
         Iterator<Task> iterator = tasks.iterator();
+
         while (iterator.hasNext()) {
             Task task = iterator.next();
             if (task.getId() == id) {
                 iterator.remove();
-                break;
+                found = true; // Marca que a tarefa foi encontrada e removida
+                break; // Sai do loop pois a tarefa já foi removida
             }
         }
+
+        // Se após iterar por todas as tarefas a flag 'found' ainda for false,
+        // significa que não existe uma tarefa com o ID especificado.
+        if (!found) {
+            throw new IllegalArgumentException("Task with ID " + id + " does not exist");
+        }
     }
+
     public List<Task> getTasksOrderedByDueDateAndPriority() {
         return tasks.stream()
                 .sorted(Comparator.comparing(Task::getDueDate)
@@ -130,21 +143,24 @@ public class Task {
     }
 
     public void updateTask(Task updatedTask) {
-        for (int i = 0; i < tasks.size(); i++) {
-            if (tasks.get(i).getId() == updatedTask.getId()) {
-                // Encontra a tarefa com o mesmo ID e atualiza-a com os novos valores.
-                Task originalTask = tasks.get(i);
+        if (updatedTask == null) {
+            throw new NullPointerException("Updated task cannot be null");
+        }
 
-                // Assume-se que apenas a data de vencimento pode ser atualizada neste método,
-                // mas você pode expandir para atualizar outros campos conforme necessário.
-                originalTask.setDueDate(updatedTask.getDueDate());
-
-                // Não é necessário adicionar a tarefa atualizada de volta à lista,
-                // pois a modificação é feita diretamente no objeto encontrado na lista.
-                break;
+        for (Task task : tasks) {
+            if (task.getId() == updatedTask.getId()) {
+                // Aqui você atualiza todos os campos da tarefa com os valores de updatedTask.
+                task.setTitle(updatedTask.getTitle());
+                task.setDescription(updatedTask.getDescription());
+                task.setDueDate(updatedTask.getDueDate());
+                task.setPriority(updatedTask.getPriority());
+                return; // Encerra o método após a atualização ser concluída.
             }
         }
+
+        throw new IllegalArgumentException("Task with ID " + updatedTask.getId() + " does not exist");
     }
+
 
 }
 
