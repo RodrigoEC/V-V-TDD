@@ -1,7 +1,12 @@
-package org.example;
+package junit5Tests;
 
+import org.example.Boleto;
+import org.example.Fatura;
+import org.example.Pagamento;
+import org.example.ProcessadorBoletos;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,12 +30,14 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    @DisplayName("Asserting the ProcessadorBOleto object was created successfully")
     public void testCreateProcessadorBoletos() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         assertEquals(processador.getClass(), ProcessadorBoletos.class);
     }
 
     @Test
+    @DisplayName("Asserting the ProcessadorBOleto object was payed successfully")
     public void testProcessingBoletos() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, fatura);
@@ -38,6 +45,7 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    @DisplayName("Asserting the ProcessadorBOleto object was payed successfully but now paying exactly what was being owed")
     public void testProcessingBoletosExectlyWhatWeOwe() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 310);
@@ -47,6 +55,7 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    @DisplayName("Asserting the ProcessadorBOleto object was payed successfully but now paying more than what was owed")
     public void testProcessingBoletosMoreThenSuffiecientMoney() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 100);
@@ -56,6 +65,7 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    @DisplayName("Trying to pay without the necessary amount")
     public void testProcessingBoletosNotSuffiecientMoney() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 1000);
@@ -66,6 +76,7 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    @DisplayName("Trying to pay without the necessary amount")
     public void testProcessingBoletosZero() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 1000);
@@ -80,6 +91,7 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    @DisplayName("Trying to pay the Fatura without any money")
     public void testProcessingBoletosFaturaZeroMoney() { // this test verifies that we can't create a fatura for a 0 price
         assertThrows(IllegalArgumentException.class, () -> {
             Fatura anotherFatura = new Fatura("Rodrigo Eloy", new Date(), 0);
@@ -87,6 +99,7 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
+    @DisplayName("PAying the Fatura correctly")
     public void testProcessingBoletosPayedFatura() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         ArrayList<Pagamento> pagamentos = processador.processingBoletos(boletos, fatura);
